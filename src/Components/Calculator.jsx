@@ -1,4 +1,5 @@
 import {Component} from "react";
+import "./Calculator.css";
 
 
 class Calculator extends Component {
@@ -56,45 +57,53 @@ class Calculator extends Component {
     render() {
         return (
             <div className="container">
-                Calculator
+                Quadratic Equation Calculator 
+                <br />
+                <span className="example-equation">Ax<sup>2</sup>+Bx+C=0</span>
                 <form className="calculator-form" onSubmit={(e) => e.preventDefault()}>
                     <input
                         className="abc-field"
-                        placeholder="a"
+                        placeholder="A"
                         value={this.state.a}
                         onChange={this.handleInputChange}
                         name="a"
                     />
                     <input
                         className="abc-field"
-                        placeholder="b"
+                        placeholder="B"
                         value={this.state.b}
                         onChange={this.handleInputChange}
                         name="b"
                     />
                     <input
                         className="abc-field"
-                        placeholder="c"
+                        placeholder="C"
                         value={this.state.c}
                         onChange={this.handleInputChange}
                         name="c"
                     />
+                    <br />
+                    <span className="result-inner">
+                        Result: 
+                    <textarea
+                        className="solution"
+                        value={this.state.answer}
+                    />
+                    </span>
+                    <div className="btns-inner">
                     <button
                         type="submit"
                         className="btn"
                         onClick={this.handleSubmit}>
                         Calc
                     </button>
-                    <textarea
-                        className="solution"
-                        value={this.state.answer}
-                    />
                     <button
                         type="submit"
                         className="btn"
                         onClick={this.handleClear}>
                         Clear
                     </button>
+                    </div>
                 </form>
             </div>
         )

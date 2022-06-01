@@ -1,0 +1,68 @@
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+.abc-field {
+    border-radius: 5px;
+    padding: 7px 5px;
+    font-size: 1.1rem;
+    margin: 12px 5px;
+    transition: 0.1s linear;
+    
+}
+
+.abc-field:focus {
+    outline-color: rgb(27, 141, 216);
+    color: rgb(27, 141, 216);
+}
+
+.result-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution {
+    border-radius: 5px;
+    padding: 5px 7px;
+    font-size: 1rem;
+    margin-left: 8px;
+    resize: none;
+    width: 150px;
+    height: 60px;
+}
+
+.btn {
+    padding: 5px 7px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    border: transparent;
+    background-color: rgb(27, 141, 216);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: rgb(27, 141, 216);
+    border: 2px solid rgb(27, 141, 216);
+}
+
+
+.example-equation {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.solution:focus {
+    outline: none;
+}
+
