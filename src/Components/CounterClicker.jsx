@@ -1,5 +1,6 @@
 import {Component} from "react";
-
+import cursorIcon from "./../assets/cursor.png";
+import "./CounterClicker.css";
 
 class CounterClicker extends Component {
 
@@ -26,11 +27,9 @@ class CounterClicker extends Component {
         return (
             <div className="clicks-container">
                 <h3 className="clicker-title">
-                    Counter Clicker
+                    Counter Clicker <img src={cursorIcon} alt="cursor icon" />
                 </h3>
-                <br />
                 <div className="scoreboard">
-                    Total clicks:
                     <span className="scoreboard-count">
                         {this.state.clicks}
                     </span>
@@ -38,7 +37,7 @@ class CounterClicker extends Component {
                 <button className="btn-clicks" onClick={this.handleClicker}>
                     Click Me
                 </button>
-                <button className="btn-clicks-rest" onClick={this.handleRestore}>
+                <button className="btn-clicks btn-reset" onClick={this.handleRestore}>
                     Restore
                 </button>
             </div>

@@ -30,11 +30,11 @@ class Calculator extends Component {
         const D = (Math.pow(b, 2) - 4 * a * c);
 
         if (D > 0) {
-            x1 = (-b + Math.sqrt(D)) / (2 * a);
-            x2 = (-b - Math.sqrt(D)) / (2 * a);
+            x1 = Math.floor(((-b + Math.sqrt(D)) / (2 * a)) * 100) / 100;
+            x2 = Math.floor(((-b - Math.sqrt(D)) / (2 * a)) * 100) / 100;
             this.setState({ answer: `Equation has 2 root's: X1=${x1} and X2=${x2}` })
         } else if (D === 0) {
-            x = ( -b / (2 * a))
+            x = Math.floor((( -b / (2 * a)))* 100) / 100;
             this.setState({ answer: `Equation has 1 root: X=${x}` })
         } else if (D < 0) {
             this.setState({ answer: 'Equation has no roots' })

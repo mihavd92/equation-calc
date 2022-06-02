@@ -1,0 +1,35 @@
+.clicker-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicker-title img {
+    width: 35px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.scoreboard-count {
+    font-size: 5rem;
+}
+
+.btn-clicks {
+    padding: 12px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.btn-clicks:hover {
+    opacity: 0.7;
+}
+
+.btn-reset {
+    background-color: rgb(218, 89, 111);
+}
