@@ -9,7 +9,7 @@ class Buttons extends Component {
     }
 
     state = {
-        className: 'green'
+        className: 'water'
     }
 
     // toggleClass() {
@@ -20,17 +20,17 @@ class Buttons extends Component {
     // то тогл буде інший. А перед цим пропишемо 2 тогла - під 'ред' і під 'грін'
 
     toggleRed() {
-        this.state = this.setState({ state: this.state.className = 'red' })
+        this.state = this.setState({ state: this.state.className = 'cola' })
     }
 
     toggleGreen() {
-        this.state = this.setState({ state: this.state.className = 'green' })
+        this.state = this.setState({ state: this.state.className = 'water' })
     }
 
     toggleClass() {
-        if (this.state.className === 'red') {
+        if (this.state.className === 'cola') {
             this.toggleGreen()
-        } else if (this.state.className === 'green') {
+        } else if (this.state.className === 'water') {
             this.toggleRed()
         } else {
             console.log('Error')
@@ -42,10 +42,13 @@ class Buttons extends Component {
         return (
             <div>
                 <p className="button-title">
-                    In this app on click Button change color 
+                    In this app on click Button change color
                 </p>
                 <div className="buttons-container">
-                    <button className={this.state.className} onClick={this.toggleClass}>Click Me</button>
+                    <button className={this.state.className} onClick={this.toggleClass}>
+                        <span className="cola-style">Cola</span> or
+                        <span className="water-style"> Water</span>?
+                    </button>
                 </div>
             </div>
         )

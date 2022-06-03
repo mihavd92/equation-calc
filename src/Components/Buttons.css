@@ -1,9 +1,9 @@
-.red {
-    background-color: red;
+.cola {
+    background-image: url("../assets/cola.jpg");
 }
 
-.green {
-    background-color: green;
+.water {
+    background-image: url("../assets/water.jpg");
 }
 
 
@@ -14,5 +14,33 @@
 }
 
 .buttons-container>button {
-    padding: 15px 18px;
+    border-color: transparent;
+    border-radius: 15px;
+    padding: 25px 28px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.2s background ease-in;
+}
+
+.buttons-container>button:hover {
+    background-position: 25px;
+}
+
+.cola-style {
+    color: #FE001A;
+}
+
+.water-style {
+    color: #1F549A;
+}
+
+.cola-style,
+.water-style {
+    font-weight: 600;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
 }
