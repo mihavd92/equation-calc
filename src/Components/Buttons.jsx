@@ -40,8 +40,13 @@ class Buttons extends Component {
 
     render() {
         return (
-            <div className="buttons-container">
-                <button className={this.state.className} onClick={this.toggleClass}>Click Me</button>
+            <div>
+                <p className="button-title">
+                    In this app on click Button change color 
+                </p>
+                <div className="buttons-container">
+                    <button className={this.state.className} onClick={this.toggleClass}>Click Me</button>
+                </div>
             </div>
         )
     }
