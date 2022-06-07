@@ -1,0 +1,35 @@
+.menu {
+    max-width: 600px;
+    padding: 0 15px;
+    margin: 25px auto;
+}
+
+.menu-inner {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    user-select: none;
+}
+
+.menu-item>a {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 7px 15px;
+    background-color: #5454dc;
+    cursor: pointer;
+    transition: 0.1s linear;
+    box-shadow: 1px 1px 5px 1px #000000;
+}
+
+.menu-item>a:hover {
+    box-shadow: 2px 2px 10px 2px #000000;
+}
+
+.menu-item>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-item>a.active {
+    background-color: red;
+}
