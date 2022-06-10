@@ -1,4 +1,4 @@
-import {Link, Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import {BrowserRouter, Routes, Route, NavLink} from "react-router-dom";
 import "./MainPage.css";
 import Calculator from "./Calculator";
 import CounterClicker from "./CounterClicker";
@@ -6,8 +6,7 @@ import Buttons from "./Buttons";
 
 
 function MainPage() {
-
-
+ 
 
         return (
             <div className="main-page-container">
@@ -19,39 +18,32 @@ function MainPage() {
 
                 <div className="menu-container">
 
-                    <Router>
+                    <BrowserRouter>
+                        <Routes>
+                            <Route path="/" element={<MainPage />} />
+                            <Route path="/buttons" element={<Buttons />} />
+                            <Route path="/calculator" element={<Calculator />} />
+                            <Route path="/clicker" element={<CounterClicker />} />
+                        </Routes>
+                    </BrowserRouter>
+
+                    
                         <div className="menu">
                             <ul className="menu-inner">
                                 <li className="menu-item">
-                                    <Link to="/" >Home</Link>
+                                    <NavLink to="/">Home</NavLink>
                                 </li>
                                 <li className="menu-item">
-                                    <Link to="/buttons" >Buttons</Link>
+                                    <NavLink to="/buttons">Buttons</NavLink>
                                 </li>
                                 <li className="menu-item">
-                                    <Link to="/calculator" >Calculator</Link>
+                                    <NavLink to="/calculator">Calculator</NavLink>
                                 </li>
                                 <li className="menu-item">
-                                    <Link to="/clicker" >Clicker</Link>
+                                    <NavLink to="/clicker">Clicker</NavLink>
                                 </li>
                             </ul>
                         </div>
-
-                        <Switch>
-                            <Route path="/main">
-                                <MainPage />
-                            </Route>
-                            <Route path="/buttons">
-                                <Buttons />
-                            </Route>
-                            <Route path="/calculator">
-                                <Calculator />
-                            </Route>
-                            <Route path="/clicker">
-                                <CounterClicker />
-                            </Route>
-                        </Switch>
-                    </Router>
                 </div>
             </div>
         )
