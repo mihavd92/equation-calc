@@ -12,26 +12,20 @@ class Buttons extends Component {
         className: 'water'
     }
 
-    // toggleClass() {
-    //     this.state = this.setState({ state: this.state.className = 'green' });
-    //     // this.state.className === 'green' ? this.state.className = this.setState({ state: this.state.className = 'red'}) : console.log('error')
-    // }
-    // Якщо вложимо фунцію в функцію? Зробимо перевірку, що якщо в стейта значення одне,
-    // то тогл буде інший. А перед цим пропишемо 2 тогла - під 'ред' і під 'грін'
 
-    toggleRed() {
+    toggleCola() {
         this.state = this.setState({ state: this.state.className = 'cola' })
     }
 
-    toggleGreen() {
+    toggleWater() {
         this.state = this.setState({ state: this.state.className = 'water' })
     }
 
     toggleClass() {
         if (this.state.className === 'cola') {
-            this.toggleGreen()
+            this.toggleWater()
         } else if (this.state.className === 'water') {
-            this.toggleRed()
+            this.toggleCola()
         } else {
             console.log('Error')
         }
