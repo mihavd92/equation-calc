@@ -6,7 +6,8 @@ import Buttons from "./Buttons";
 
 
 function MainPage() {
- 
+
+
 
         return (
             <div className="main-page-container">
@@ -19,15 +20,6 @@ function MainPage() {
                 <div className="menu-container">
 
                     <BrowserRouter>
-                        <Routes>
-                            <Route path="/" element={<MainPage />} />
-                            <Route path="/buttons" element={<Buttons />} />
-                            <Route path="/calculator" element={<Calculator />} />
-                            <Route path="/clicker" element={<CounterClicker />} />
-                        </Routes>
-                    </BrowserRouter>
-
-                    
                         <div className="menu">
                             <ul className="menu-inner">
                                 <li className="menu-item">
@@ -44,6 +36,13 @@ function MainPage() {
                                 </li>
                             </ul>
                         </div>
+                        <Routes>
+                            <Route path="/main" element={<MainPage />} />
+                            <Route path="/buttons" element={<Buttons />} />
+                            <Route path="/calculator" element={<Calculator />} />
+                            <Route path="/clicker" element={<CounterClicker />} />
+                        </Routes>
+                    </BrowserRouter>
                 </div>
             </div>
         )
