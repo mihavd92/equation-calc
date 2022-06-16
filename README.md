@@ -6,6 +6,6 @@ On this page you can see several React projects.
 
 For example: equation calc, counter clicker and change style of button, on click.
 <br />
-![Screenshot](https://github.com/mihavd92/equation-calc/blob/public/image.jpg)
+![Game Screenshot](https://github.com/mihavd92/equation-calc/blob/master/public/image.jpg)
 
 
